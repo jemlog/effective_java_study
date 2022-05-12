@@ -18,7 +18,7 @@ public class CounterPointTest {
     }
 
     public static void main(String[] args) {
-        Point p1 = new Point(1,  0);
+        Point p1 = new Point(1,  0); // TODO : 새로 만든다고 해도 VALUE 클래스이기 때문에, 같다고 해야 한다!
         Point p2 = new CounterPoint(1, 0);
 
         // true를 출력한다.

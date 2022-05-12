@@ -7,7 +7,7 @@ import lombok.ToString;
  * https://projectlombok.org/features/EqualsAndHashCode
  * https://projectlombok.org/features/ToString
  */
-@EqualsAndHashCode
+@EqualsAndHashCode // TODO : JAVA RECORD 공부하기
 @ToString
 public class Point {
     private final int x;
