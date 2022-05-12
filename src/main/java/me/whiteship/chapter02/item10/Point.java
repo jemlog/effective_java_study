@@ -40,6 +40,7 @@ public class Point {
 //            return false;
 //        Point p = (Point) o;
 //        return p.x == x && p.y == y;
+//
 //    }
 
     // 아이템 11 참조
