@@ -7,7 +7,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 import static java.util.Comparator.comparingInt;
 
-// PhoneNumber를 비교할 수 있게 만든다. (91-92쪽)
+// PhoneNumber를 비교할 수 있게 만든다. (91-92쪽) // TODO : PhoneNumber만 비교하겠다.
 public final class PhoneNumber implements Cloneable, Comparable<PhoneNumber> {
     private final short areaCode, prefix, lineNum;
 
@@ -68,7 +68,7 @@ public final class PhoneNumber implements Cloneable, Comparable<PhoneNumber> {
     }
 
     // 코드 14-2 기본 타입 필드가 여럿일 때의 비교자 (91쪽)
-    @Override
+    @Override // TODO : 이게 붙어있어야 제대로된 오버라이딩인지 검토
     public int compareTo(PhoneNumber pn) {
         int result = Short.compare(areaCode, pn.areaCode);
         if (result == 0)  {
@@ -80,6 +80,7 @@ public final class PhoneNumber implements Cloneable, Comparable<PhoneNumber> {
     }
 
     // 코드 14-3 비교자 생성 메서드를 활용한 비교자 (92쪽)
+    // Java8부터는 Comparator가 제공하는 static 메서드를 사용 가능하다!
     private static final Comparator<PhoneNumber> COMPARATOR =
             comparingInt((PhoneNumber pn) -> pn.areaCode)
                     .thenComparingInt(pn -> pn.getPrefix())

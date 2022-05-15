@@ -10,12 +10,13 @@ public class NutritionFacts {
     private final int carbohydrate;
 
     public static void main(String[] args) {
-        NutritionFacts cocaCola = new Builder(240, 8)
+        NutritionFacts cocaCola = new Builder(240, 8) // TODO : 필수속성은 무조건 넣고 가자.
                 .calories(100)
                 .sodium(35)
                 .carbohydrate(27).build();
     }
 
+    // TODO : 필수적인 필드와 필수적이지 않은 필드가 있고, 매개변수가 많아질때는 빌더 사용!
     public static class Builder {
         // 필수 매개변수
         private final int servingSize;
@@ -27,12 +28,12 @@ public class NutritionFacts {
         private int sodium        = 0;
         private int carbohydrate  = 0;
 
-        public Builder(int servingSize, int servings) {
+        public Builder(int servingSize, int servings) { // TODO : 필수로 받아야 하는 값들 빌더 생성자로 넣어줌
             this.servingSize = servingSize;
             this.servings    = servings;
         }
 
-        public Builder calories(int val)
+        public Builder calories(int val) // TODO : 메서드 체이닝을 가능하게 해준다.
         { calories = val;      return this; }
         public Builder fat(int val)
         { fat = val;           return this; }

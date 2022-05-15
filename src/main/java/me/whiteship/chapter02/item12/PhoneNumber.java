@@ -2,6 +2,8 @@ package me.whiteship.chapter02.item12;
 
 import lombok.ToString;
 
+import java.util.HashMap;
+
 // PhoneNumber에 toString 메서드 추가 (75쪽)
 public final class PhoneNumber {
     private final short areaCode, prefix, lineNum;
@@ -28,6 +30,8 @@ public final class PhoneNumber {
      * 앞에서부터 0으로 채워나간다. 예컨대 가입자 번호가 123이라면
      * 전화번호의 마지막 네 문자는 "0123"이 된다.
      */
+    // 객체의 모든 데이터를 보여주면 안된다!!! 로그정보나 기타 중요 데이터를 toString으로 보여주면 안됨!
+    // 어차피 toString으로 제공한 정보는 그냥 get 메서드로 제공해주자!
     @Override public String toString() {
         return String.format("%03d-%03d-%04d",
                 areaCode, prefix, lineNum);

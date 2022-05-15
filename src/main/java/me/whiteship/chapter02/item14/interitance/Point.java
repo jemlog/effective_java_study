@@ -1,5 +1,6 @@
 package me.whiteship.chapter02.item14.interitance;
 
+// TODO :
 public class Point implements Comparable<Point>{
 
     final int x, y;

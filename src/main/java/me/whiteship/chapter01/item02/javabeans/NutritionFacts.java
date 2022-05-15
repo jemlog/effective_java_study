@@ -42,7 +42,7 @@ public class NutritionFacts {
     }
 
     public static void main(String[] args) {
-        NutritionFacts cocaCola = new NutritionFacts();
+        NutritionFacts cocaCola = new NutritionFacts(); // TODO : 필수 값들이 입력되기 전에 호출이 될 수도 있다.
         cocaCola.setServingSize(240);
         cocaCola.setServings(8);
 

@@ -22,7 +22,7 @@ public class HashMapTest {
         map.put(number1, "keesun");
         map.put(number2, "whiteship");
 
-        String s = map.get(number2);
+        String s = map.get(number1);
         System.out.println(s);
     }
 }

@@ -27,6 +27,8 @@ public class NamedPoint extends Point {
         NamedPoint p2 = new NamedPoint(1, 0, "whiteship");
 
         Set<NamedPoint> points = new TreeSet<>(new Comparator<NamedPoint>() {
+            // TODO: 정렬해주는 자료구조에 객체를 그냥 집어넣으면 기준이 없다!
+            // TODO : Comparator 구현해서 기준을 부여해야 한다.
             @Override
             public int compare(NamedPoint p1, NamedPoint p2) {
                 int result = Integer.compare(p1.getX(), p2.getX());

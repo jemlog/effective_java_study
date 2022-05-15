@@ -17,14 +17,14 @@ public abstract class Pizza {
         EnumSet<Topping> toppings = EnumSet.noneOf(Topping.class);
         public T addTopping(Topping topping) {
             toppings.add(Objects.requireNonNull(topping));
-            return self();
+            return self(); // TODO: 여기서 this를 return 하면 return type을 T 말고 Builder<T>로 정의해야 한다.
         }
 
         abstract Pizza build();
 
         // 하위 클래스는 이 메서드를 재정의(overriding)하여
         // "this"를 반환하도록 해야 한다.
-        protected abstract T self();
+        protected abstract T self(); // TODO : T는 결국 빌더이다!
     }
     
     Pizza(Builder<?> builder) {

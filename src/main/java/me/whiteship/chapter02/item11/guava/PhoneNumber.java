@@ -38,7 +38,7 @@ public final class PhoneNumber {
     @Override
     public int hashCode() {
         return Hashing.goodFastHash(32)
-                .hashObject(this, PhoneNumberFunnel.INSTANCE)
+                .hashObject(this, PhoneNumberFunnel.INSTANCE) //
                 .hashCode();
     }
 
