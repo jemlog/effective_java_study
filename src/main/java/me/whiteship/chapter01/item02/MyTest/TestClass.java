@@ -1,17 +1,14 @@
 package me.whiteship.chapter01.item02.MyTest;
 
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
+
 public class TestClass {
 
-    private int testNum;
-    private String testName;
-
-    public TestClass(String testName,int testNum)
-    {
-        this.testNum = testNum;
-        this.testName = testName;
-    }
-
-    public static void main(String[] args) {
+    public static void main(String[] args) throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
+        Constructor<Elvis> declaredConstructor = Elvis.class.getDeclaredConstructor();
+        declaredConstructor.setAccessible(true);
+        Elvis elvis = declaredConstructor.newInstance();
 
     }
 }
